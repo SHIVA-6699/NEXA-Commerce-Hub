@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import Hedaer from "./Header";
 import "../index.css";
 const Createrequest = () => {
@@ -23,9 +23,6 @@ const Createrequest = () => {
         <Col lg={6} className="shadow-lg">
           <div className="d-flex flex-wrap gap-3 justify-content-center m-auto text-center mt-4">
             {Object.entries(category).map((item, index) => (
-              //   <p key={index} className="w-25">
-              //   {item[1]}
-              // </p>
               <a key={index} className="d-grid ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
