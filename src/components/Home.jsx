@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Form, InputGroup } from "react-bootstrap";
+import { Form, InputGroup } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import { Auth } from "aws-amplify";
 import { Link } from "react-router-dom";

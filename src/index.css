@@ -10,3 +10,13 @@ a
   color: black;
   padding: 1.5rem;
 }
+.issue-items
+{
+  border: none;
+  width: fit-content;
+  padding: .7rem 1.5rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background-color: #0B5ED7;
+  color: white;
+}
