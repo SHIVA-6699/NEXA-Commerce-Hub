@@ -17,6 +17,10 @@ a
   padding: .7rem 1.5rem;
   border-top-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-  background-color: #0B5ED7;
+  background-color: #8700ff;
   color: white;
+}
+.address:hover
+{
+  box-shadow:2px 2px #5799F9 ;
 }

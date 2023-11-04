@@ -36,10 +36,11 @@ const Category1 = () => {
                 </ListGroup>
               </Col>
               <Col lg={4}>
-                <Link to={"/Cart"} className="text-white">
+                <Link to={"/Cart"} className="">
                   <Button
-                    variant="success"
-                    className="mx-3"
+                    variant=""
+                    style={{ background: "#8700ff" }}
+                    className="mx-3 text-white"
                     onClick={() => store(item[1])}
                   >
                     Add to Cart

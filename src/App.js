@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Createrequest from "./components/Createrequest.jsx";
 import Cateogry1 from "./components/cateogry/Cateogry1.jsx";
 import Cart from "./components/Cart.jsx";
+import Cartside from "./pages/CartSlilde.jsx";
+import Checkout from "./pages/Checkout.jsx";
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
@@ -18,6 +20,8 @@ function App({ signOut, user }) {
           <Route path="/Createrequest" element={<Createrequest />} />
           <Route path ="/Cateogry1" element={<Cateogry1/>}></Route>
           <Route path="/Cart" element={<Cart/>}></Route>
+          <Route path="/Cartside" element={<Cartside/>}></Route>
+          <Route path="/Checkout" element={<Checkout/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
