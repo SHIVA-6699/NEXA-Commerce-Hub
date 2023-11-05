@@ -1,4 +1,4 @@
-import { Alert, Button, Container,Col } from "react-bootstrap";
+import { Alert, Button, Container, Col } from "react-bootstrap";
 import Hedaer from "./Header";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
@@ -52,30 +52,31 @@ const Cart = () => {
           </div>
         </div>
       </Container>
-      {count>0?
-      <Link to={"/Checkout"} className="">
-        <div
-          className="d-flex justify-content-center "
-          style={{ marginTop: "18rem" }}
-        >
-          <Button
-            className="col-4 text-white"
-            variant=""
-            style={{ background: "#8700ff" }}
-         
+      {count > 0 ? (
+        <Link to={"/Checkout"} className="">
+          <div
+            className="d-flex justify-content-center "
+            style={{ marginTop: "18rem" }}
           >
-            Buy
-          </Button>
+            <Button
+              className="col-4 text-white"
+              variant=""
+              style={{ background: "#8700ff" }}
+            >
+              Buy
+            </Button>
+          </div>
+        </Link>
+      ) : (
+        <div
+          className="w-100 d-flex justify-content-center msg"
+          style={{ marginTop: "13rem" }}
+        >
+          <Col xxl={10}>
+            <Alert variant="danger text-center">Add Items</Alert>
+          </Col>
         </div>
-      </Link>
-      :
-      <div className="w-100 d-flex justify-content-center msg" style={{"marginTop":"13rem"}}>
-      <Col xxl={10}>
-
-      <Alert variant="danger text-center">Add Items</Alert>
-      </Col>
-      </div>
-}
+      )}
     </>
   );
 };
