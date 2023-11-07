@@ -2,7 +2,7 @@ import { Amplify } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import awsExports from "./aws-exports";
-import Home from "./components/Home.jsx";
+import Home from "./pages/Home.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Createrequest from "./components/Createrequest.jsx";
 import Cateogry1 from "./components/cateogry/Cateogry1.jsx";

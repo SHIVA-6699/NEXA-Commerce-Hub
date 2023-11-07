@@ -1,4 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+:root
+{
+  --primary:"#163A66"
+}
 
 /* BHMUPI.css */
 .alert-container {

@@ -1,4 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+:root
+{
+  --primary:"#163A66"
+}
   body
 {
     background-color: rgb(234, 238, 241);
@@ -13,14 +17,25 @@ a
 .issue-items
 {
   border: none;
+  
   width: fit-content;
   padding: .7rem 1.5rem;
   border-top-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
-  background-color: #8700ff;
+  background-color: var(--primary);
   color: white;
 }
 .address:hover
 {
   box-shadow:2px 2px #5799F9 ;
+}
+.img {
+  position: relative;
+ transition: top .4s ease-in-out;
+  top: 0; /* Set the initial position */
+}
+
+.img:hover {
+  top: -0.7rem; /* Change the position on hover */
+  transition: top .4s ease-in-out; /* Add a specific transition for 'top' property */
 }

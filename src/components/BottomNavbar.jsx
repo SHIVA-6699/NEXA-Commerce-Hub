@@ -17,7 +17,7 @@ const BottomNavbar = () => {
                 <Col md={6}>
                   <Link
                     to={"/"}
-                    style={{ background: "#8700ff" }}
+                    style={{ background: "#163A66" }}
                     className="p-2 rounded"
                   >
                     <svg
@@ -36,7 +36,7 @@ const BottomNavbar = () => {
                 </Col>
                 <Col md={6}>
                   <Link
-                    style={{ background: "#8700ff" }}
+                    style={{ background: "#163A66" }}
                     className="p-2 rounded"
                   >
                     <svg

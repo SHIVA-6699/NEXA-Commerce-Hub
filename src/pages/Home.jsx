@@ -3,8 +3,10 @@ import { Form, InputGroup } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import { Auth } from "aws-amplify";
 import { Link } from "react-router-dom";
-import Hedaer from "./Header";
-import BottomNavbar from "./BottomNavbar";
+import Hedaer from "../components/Header";
+import BottomNavbar from "../components/BottomNavbar";
+import HomepageAlbum from "../components/HomepageAlbum";
+
 const Home = () => {
   const [email, setemail] = useState("");
 
@@ -17,7 +19,12 @@ const Home = () => {
 
   return (
     <>
+   
       <Hedaer />
+      <div className="mt-5 ">
+
+      <HomepageAlbum/>
+      </div>
       <Form className="d-flex justify-content-center mt-5">
         <Col xl={5}>
           <h6>{email}👋</h6>
