@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Header from "../Header";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import BottomNavbar from "../BottomNavbar";
 
 const Category1 = () => {
   const data = {
@@ -52,6 +53,7 @@ const Category1 = () => {
           </Row>
         </Container>
       ))}
+      <BottomNavbar/>
     </>
   );
 };

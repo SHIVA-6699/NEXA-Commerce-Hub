@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import { Auth } from "aws-amplify";
 import { Link } from "react-router-dom";
 import Hedaer from "./Header";
+import BottomNavbar from "./BottomNavbar";
 const Home = () => {
   const [email, setemail] = useState("");
 
@@ -77,6 +78,7 @@ const Home = () => {
           </div>
         </div>
       </Col>
+      <BottomNavbar/>
     </>
   );
 };

@@ -5,6 +5,7 @@ import { Form } from "react-bootstrap";
 import "../index.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/download.png";
+import BottomNavbar from "./BottomNavbar";
 const Cart = () => {
   const [count, setCount] = useState(0);
   const data = window.localStorage.getItem("useritem");
@@ -77,6 +78,7 @@ const Cart = () => {
           </Col>
         </div>
       )}
+      <BottomNavbar/>
     </>
   );
 };

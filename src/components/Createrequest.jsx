@@ -3,6 +3,7 @@ import { Container, Col } from "react-bootstrap";
 import Hedaer from "./Header";
 import "../index.css";
 import { Link } from "react-router-dom";
+import BottomNavbar from "./BottomNavbar";
 const Createrequest = () => {
   const category = {
     item1: "value1",
@@ -44,6 +45,7 @@ const Createrequest = () => {
           </div>
         </Col>
       </Container>
+      <BottomNavbar/>
     </>
   );
 };

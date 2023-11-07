@@ -19,7 +19,7 @@ const Checkout = () => {
   return (
     <>
       <Hedaer />
-      <Container>
+      <Container className="">
         <h4 className="mt-5 text-center">Checkout Page</h4>
         <div className="d-flex justify-content-center mt-5">
           <Row>
