@@ -18,6 +18,7 @@ function App({ signOut, user }) {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/Createrequest" element={<Createrequest />} />
           <Route path="/Cateogry1" element={<Cateogry1 />}></Route>
           <Route path="/Cart" element={<Cart />}></Route>

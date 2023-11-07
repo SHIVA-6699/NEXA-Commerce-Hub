@@ -45,7 +45,7 @@ const Createrequest = () => {
           </div>
         </Col>
       </Container>
-      <BottomNavbar/>
+      <BottomNavbar />
     </>
   );
 };

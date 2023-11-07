@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import Hedaer from "../components/Header";
 import BottomNavbar from "../components/BottomNavbar";
 import HomepageAlbum from "../components/HomepageAlbum";
+import HomePageSlide1 from "../components/HomePageSlide1";
+import HomepageSlide2 from "../components/HomepageSlide2";
 
 const Home = () => {
   const [email, setemail] = useState("");
@@ -24,6 +26,13 @@ const Home = () => {
       <div className="mt-5 ">
 
       <HomepageAlbum/>
+      </div>
+      <div className="mb-5">
+      <HomePageSlide1/>
+      </div>
+      <div className="" style={{"marginTop":"7rem"}}>
+        
+      <HomepageSlide2/>
       </div>
       <Form className="d-flex justify-content-center mt-5">
         <Col xl={5}>

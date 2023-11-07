@@ -2,8 +2,8 @@ import img1 from "../assets/HomePageAlbumImages/img1.jpg";
 import img2 from "../assets/HomePageAlbumImages/img2.jpg";
 import img3 from "../assets/HomePageAlbumImages/img3.jpg";
 import img4 from "../assets/HomePageAlbumImages/img4.jpg";
-import img5 from "../assets/HomePageAlbumImages/img5.jpg";
-import img6 from "../assets/HomePageAlbumImages/img6.jpg";
+import img5 from "../assets/HomePageAlbumImages/img5.png";
+import img6 from "../assets/HomePageAlbumImages/img6.png";
 import { Image, Row, Col } from "react-bootstrap";
 import '../index.css'
 
@@ -21,7 +21,7 @@ const HomepageAlbum = () => {
     <>
       <div className="d-flex justify-content-center">
         <Row className="mt-5">
-          <Col sm={12} lg={6} className="">
+          <Col sm={12} lg={6} className="d-flex justify-content-center">
             <div className="mt-5">
               <div>
                 <h2 className="m-0" style={{ color: "#0a4b9b" }}>

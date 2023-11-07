@@ -5,7 +5,7 @@
 }
   body
 {
-    background-color: rgb(234, 238, 241);
+  
 }
 a
 {
@@ -38,4 +38,8 @@ a
 .img:hover {
   top: -0.7rem; /* Change the position on hover */
   transition: top .4s ease-in-out; /* Add a specific transition for 'top' property */
+}
+body
+{
+overflow-x: hidden;
 }
