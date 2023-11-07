@@ -6,6 +6,7 @@ import Gpay from "../components/Gpay";
 import { Link } from "react-router-dom";
 import "../index.css";
 import Hedaer from "../components/Header";
+import BottomNavbar from "../components/BottomNavbar";
 const Checkout = () => {
   const [add, setadd] = useState(false);
   const [bhi, setBHMUPI] = useState(false);
@@ -56,7 +57,7 @@ const Checkout = () => {
                     className="bg-black border-0 mx-5 mt-3 "
                     style={{ width: "15rem" }}
                     onClick={() => {
-                      bhi == false ? setBHMUPI(true) : setBHMUPI(false);
+                      bhi === false ? setBHMUPI(true) : setBHMUPI(false);
                     }}
                   >
                     Pay With BHMUPI
@@ -76,6 +77,7 @@ const Checkout = () => {
           </Row>
         </div>
       </Container>
+     <BottomNavbar/>
     </>
   );
 };

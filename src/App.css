@@ -1,1 +1,21 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* BHMUPI.css */
+.alert-container {
+     position: relative;
+  top:-21rem;
+  left:-20rem;
+  
+  transition: all 1s ease-in-out;
+  opacity:0;
+}
+
+.alert-container.show {
+  opacity: 1;
+}
+.alertmsg
+{
+ 
+  width:50rem;
+   
+}

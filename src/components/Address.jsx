@@ -6,7 +6,7 @@ const Address=()=>{
         <>
           <div>
               <h6>Add New Address</h6>
-              <Form>
+              <Form className="mb-5">
                 <Form.Label className="m-3">House No:</Form.Label>
                 <Form.Control className="mx-3"></Form.Control>
                 <Form.Label className="m-3">
