@@ -6,16 +6,16 @@ import { Link } from "react-router-dom";
 import BottomNavbar from "./BottomNavbar";
 const Createrequest = () => {
   const category = {
-    item1: "value1",
-    item2: "value2",
-    item3: "value3",
-    item4: "value4",
-    item5: "value5",
-    item6: "value6",
-    item7: "value7",
-    item8: "value8",
-    item9: "value9",
-    item10: "value10",
+    "/Cateogry1": "value1",
+    "/Cateogry2": "value2",
+    "/Cateogry3": "value3",
+    "/Cateogry4": "value4",
+    "/Cateogry5": "value5",
+    "/Cateogry6": "value6",
+    "/Cateogry7": "value7",
+    "/Cateogry8": "value8",
+    "/Cateogry9": "value9",
+    "/Cateogry10": "value10",
   };
   return (
     <>
@@ -25,7 +25,7 @@ const Createrequest = () => {
         <Col lg={8} className="shadow-lg">
           <div className="d-flex flex-wrap  justify-content-center  text-center">
             {Object.entries(category).map((item, index) => (
-              <Link to={"/Cateogry1"}>
+              <Link to={item[0]}>
                 <a key={index} className="d-grid ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const Createrequest = () => {
                     <circle cx="17.5" cy="17.5" r="4.5" fill="#00000" />
                     <path fill="#00000" d="M3 13.5h8v8H3z" />
                   </svg>
-                  {item[0]}
+                  {item[1]}
                 </a>
               </Link>
             ))}

@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Col, Image, Row } from "react-bootstrap";
 const images = [
-  require("../assets/HomePageSlide/img1.jpg"),
-  require("../assets/HomePageSlide/img2.png"),
-  require("../assets/HomePageSlide/img3.png"),
-  require("../assets/HomePageSlide/img4.png"),
-  require("../assets/HomePageSlide/img5.png"),
-  //   require("../assets/HomePageSlide/img6.png"),
-  require("../assets/HomePageSlide/img7.png"),
-  require("../assets/HomePageSlide/img8.jpg"),
-  require("../assets/HomePageSlide/img9.png"),
-  require("../assets/HomePageSlide/img10.png"),
-  require("../assets/HomePageSlide/img11.png"),
-  require("../assets/HomePageSlide/img12.png"),
-  require("../assets/HomePageSlide/img13.jpg"),
-  require("../assets/HomePageSlide/img14.png"),
-  require("../assets/HomePageSlide/img15.png"),
+  require("../assets/HomePageSlide1/img1.jpg"),
+  require("../assets/HomePageSlide1/img2.png"),
+  require("../assets/HomePageSlide1/img3.png"),
+  require("../assets/HomePageSlide1/img4.png"),
+  require("../assets/HomePageSlide1/img5.png"),
+  //   require("../assets/HomePageSlide1/img6.png"),
+  require("../assets/HomePageSlide1/img7.png"),
+  require("../assets/HomePageSlide1/img8.jpg"),
+  require("../assets/HomePageSlide1/img9.png"),
+  require("../assets/HomePageSlide1/img10.png"),
+  require("../assets/HomePageSlide1/img11.png"),
+  require("../assets/HomePageSlide1/img12.png"),
+  require("../assets/HomePageSlide1/img13.jpg"),
+  require("../assets/HomePageSlide1/img14.png"),
+  require("../assets/HomePageSlide1/img15.png"),
 ];
 
-const HomePageSlide1 = () => {
+const HomePageSlide11 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -31,7 +31,10 @@ const HomePageSlide1 = () => {
   }, [currentIndex]);
 
   return (
-    <div className="border border-1 border-black mt-5 border-opacity-25">
+    <div
+      className="border border-1 border-gray mt-5"
+      style={{ borderColor: "rgba(255, 0, 0, 0.5)" }}
+    >
       <Row>
         <Col sm={2} className="bg-white">
           <div className=" mt-5 d-flex justify-content-center">
@@ -46,7 +49,7 @@ const HomePageSlide1 = () => {
               <Image
                 key={index}
                 rounded
-                className="m-0 py-3 "
+                className="m-0 py-3"
                 width={150}
                 height={120}
                 src={src}
@@ -63,4 +66,4 @@ const HomePageSlide1 = () => {
   );
 };
 
-export default HomePageSlide1;
+export default HomePageSlide11;

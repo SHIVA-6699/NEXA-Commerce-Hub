@@ -43,3 +43,8 @@ body
 {
 overflow-x: hidden;
 }
+.img
+{
+  object-fit: cover;
+  object-position: center;
+}
