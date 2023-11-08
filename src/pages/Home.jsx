@@ -8,6 +8,7 @@ import BottomNavbar from "../components/BottomNavbar";
 import HomepageAlbum from "../components/HomepageAlbum";
 import HomePageSlide1 from "../components/HomePageSlide1";
 import HomepageSlide2 from "../components/HomepageSlide2";
+import NewProducts from "../components/NewProducts";
 
 const Home = () => {
   const [email, setemail] = useState("");
@@ -21,20 +22,14 @@ const Home = () => {
 
   return (
     <>
-   
       <Hedaer />
       <div className="mt-5 ">
-
-      <HomepageAlbum/>
+        <HomepageAlbum />
       </div>
       <div className="mb-5">
-      <HomePageSlide1/>
+        <HomePageSlide1 />
       </div>
-      <div className="" style={{"marginTop":"7rem"}}>
-        
-      <HomepageSlide2/>
-      </div>
-      <Form className="d-flex justify-content-center mt-5">
+      <Form className="d-flex justify-content-center mt-5 mb-5">
         <Col xl={5}>
           <h6>{email}👋</h6>
           <p>Let's do something...</p>
@@ -57,6 +52,13 @@ const Home = () => {
           </InputGroup>
         </Col>
       </Form>
+      <div className="">
+        <HomepageSlide2 />
+      </div>
+      <div>
+        <NewProducts />
+      </div>
+
       <h6 className="text-center mt-5">Quick Actions</h6>
       <Col lg={12} className="d-flex justify-content-center">
         <div className="d-flex justify-content-center mt-5 p-5 gap-5 shadow-sm">
@@ -94,7 +96,7 @@ const Home = () => {
           </div>
         </div>
       </Col>
-      <BottomNavbar/>
+      <BottomNavbar />
     </>
   );
 };

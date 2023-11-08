@@ -31,16 +31,13 @@ const HomePageSlide11 = () => {
   }, [currentIndex]);
 
   return (
-    <div
-      className="border border-1 border-gray mt-5"
-      style={{ borderColor: "rgba(255, 0, 0, 0.5)" }}
-    >
-      <Row>
+    <div className="border border-1 border-gray " style={{ marginTop: "6rem" }}>
+      <Row className="">
         <Col sm={2} className="bg-white">
           <div className=" mt-5 d-flex justify-content-center">
-            <h6 className="text-center" style={{ color: "#163A66" }}>
-              Type with Industries
-            </h6>
+            <h5 className="text-center" style={{ color: "#163A66" }}>
+              Industry veterans
+            </h5>
           </div>
         </Col>
         <Col sm={10} className="bg-white">
