@@ -1,7 +1,7 @@
 import img1 from '../assets/ExsitingImages/img1.jpg'
 import img2 from '../assets/ExsitingImages/img2.jpg'
 import img3 from '../assets/ExsitingImages/img3.jpg'
-
+import { Link } from 'react-router-dom'
 import img4 from '../assets/ExsitingImages/img5.jpg'
 import img5 from '../assets/ExsitingImages/img6.jpg'
 import { Image } from 'react-bootstrap'
@@ -21,9 +21,12 @@ const ExsitingProductiHome=()=>{
             <h3 style={{ color: "#163A66" }} className="mb-4 m-4 ms-5">
               Featured
             </h3>
-            <h6 style={{ color: "#163A66" }} className="m-3 me-5 viewtag">
-              View More
-            </h6>
+            <Link className="p-4 m-4 ms-5" to="/ExistingProducts" style={{ textDecoration: "none" }}>
+              <h6 style={{ color: "#163A66" }} className=" viewtag">
+                View More
+              </h6>
+            </Link> 
+           
           </div>
           <div className="d-flex flex-wrap gap-3 m-5 justify-content-center">
             {images.map((item, index) => (
@@ -33,8 +36,8 @@ const ExsitingProductiHome=()=>{
                 width={240}
                 height={200}
                 style={{ objectFit: "cover", objectPosition: "center" }}
-                className='shadow-lg'
-                loading='lazy'
+                className="shadow-lg"
+                loading="lazy"
                 rounded
               />
             ))}

@@ -24,14 +24,14 @@ const HomepageAlbum = () => {
           <Col sm={12} lg={6} className="d-flex justify-content-center pe-5 ">
             <div className="mt-5">
               <div>
-                <h2 className="m-0" style={{ color: "#0a4b9b" }}>
+                <h2 className="h1 w-100" style={{ color: "#0a4b9b" }}>
                   Your One-Stop
                 </h2>
               </div>
               <div>
-                <h1 className="m-0" style={{ color: "#163A66" }}>
+                <h3 className="" style={{ color: "#163A66" }}>
                   E-Commerce, Destination
-                </h1>
+                </h3>
               </div>
               <hr
                 className=""
