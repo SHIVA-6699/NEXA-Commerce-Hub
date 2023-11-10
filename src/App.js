@@ -19,9 +19,25 @@ import Cart from "./components/Cart.jsx";
 import Cartside from "./pages/CartSlilde.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import QrCode from "./components/Qrcode.jsx";
+import { useEffect,useState } from "react";
+import Loading from "./components/Loading.jsx";
+
+
+
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
+    const [appLoaded, setAppLoaded] = useState(false);
+      useEffect(() => {
+        const initializeApp = async () => {
+          setAppLoaded(true);
+        };
+        initializeApp();
+      }, []);
+  if (!appLoaded) {
+    return <Loading />;
+  }
+
   return (
     <>
       <BrowserRouter>

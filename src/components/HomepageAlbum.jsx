@@ -5,7 +5,7 @@ import img4 from "../assets/HomePageAlbumImages/img4.jpg";
 import img5 from "../assets/HomePageAlbumImages/img5.png";
 import img6 from "../assets/HomePageAlbumImages/img6.png";
 import { Image, Row, Col } from "react-bootstrap";
-import '../index.css'
+import "../index.css";
 
 const HomepageAlbum = () => {
   const images = {

@@ -30,7 +30,7 @@ const ExsitingProductiHome=()=>{
               <Image
                 src={item}
                 key={index}
-                width={250}
+                width={240}
                 height={200}
                 style={{ objectFit: "cover", objectPosition: "center" }}
                 className='shadow-lg'
