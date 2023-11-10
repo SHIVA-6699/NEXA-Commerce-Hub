@@ -50,6 +50,7 @@ const HomePageSlide11 = () => {
                 width={150}
                 height={120}
                 src={src}
+                loading="lazy"
                 style={{
                   transform: `translateX(${index - currentIndex}00%)`,
                   transition: "transform 1s",

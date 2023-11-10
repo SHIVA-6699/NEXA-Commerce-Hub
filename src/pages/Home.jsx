@@ -9,6 +9,7 @@ import HomepageAlbum from "../components/HomepageAlbum";
 import HomePageSlide1 from "../components/HomePageSlide1";
 import HomepageSlide2 from "../components/HomepageSlide2";
 import NewProducts from "../components/NewProducts";
+import ExsitingProductiHome from "../components/ExsitingProductHome";
 
 const Home = () => {
   const [email, setemail] = useState("");
@@ -54,6 +55,9 @@ const Home = () => {
       </Form>
       <div className="">
         <HomepageSlide2 />
+      </div>
+      <div>
+        <ExsitingProductiHome/>
       </div>
       <div>
         <NewProducts />

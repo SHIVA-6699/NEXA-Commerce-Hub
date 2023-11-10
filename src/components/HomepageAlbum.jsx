@@ -19,9 +19,9 @@ const HomepageAlbum = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center ">
         <Row className="mt-5">
-          <Col sm={12} lg={6} className="d-flex justify-content-center">
+          <Col sm={12} lg={6} className="d-flex justify-content-center pe-5 ">
             <div className="mt-5">
               <div>
                 <h2 className="m-0" style={{ color: "#0a4b9b" }}>
@@ -55,7 +55,7 @@ const HomepageAlbum = () => {
               </p>
             </div>
           </Col>
-          <Col sm={12} lg={6} className="">
+          <Col sm={12} lg={6} className="ps-5x">
             <div
               className="d-flex flex-wrap justify-content-center gap-4"
               style={{ width: "36rem" }}
@@ -68,6 +68,7 @@ const HomepageAlbum = () => {
                     height={180}
                     rounded
                     className="shadow img"
+                    loading="lazy"
                   />
                 </div>
               ))}

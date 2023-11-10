@@ -113,3 +113,16 @@ overflow-x: hidden;
   text-align: justify;
   white-space: wrap;
 }
+.viewtag
+{
+
+}
+.viewtag::after
+{
+content:"";
+width: 1rem;
+height: 1rem;
+text-decoration: underline;
+background-color: rgb(216, 0, 0);
+
+}
