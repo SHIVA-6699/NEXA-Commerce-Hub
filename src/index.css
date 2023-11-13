@@ -143,5 +143,12 @@ transition:  scale 450ms;
 .exsimg:hover
 {
   scale: 1.05;
-  box-shadow: 2px 2px 2px 2px green;
+}
+.exsimg1
+{
+  scale: 1.5;
+}
+.exsimg1:hover
+{
+  scale: 2;
 }

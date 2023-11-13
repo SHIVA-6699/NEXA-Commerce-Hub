@@ -1,48 +1,90 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
+export const createOrderdetails = /* GraphQL */ `
+  mutation CreateOrderdetails(
+    $input: CreateOrderdetailsInput!
+    $condition: ModelOrderdetailsConditionInput
   ) {
-    createTodo(input: $input, condition: $condition) {
+    createOrderdetails(input: $input, condition: $condition) {
       id
       address
       orders
-      payment
       createdAt
       updatedAt
       __typename
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
+export const updateOrderdetails = /* GraphQL */ `
+  mutation UpdateOrderdetails(
+    $input: UpdateOrderdetailsInput!
+    $condition: ModelOrderdetailsConditionInput
   ) {
-    updateTodo(input: $input, condition: $condition) {
+    updateOrderdetails(input: $input, condition: $condition) {
       id
       address
       orders
-      payment
       createdAt
       updatedAt
       __typename
     }
   }
 `;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
+export const deleteOrderdetails = /* GraphQL */ `
+  mutation DeleteOrderdetails(
+    $input: DeleteOrderdetailsInput!
+    $condition: ModelOrderdetailsConditionInput
   ) {
-    deleteTodo(input: $input, condition: $condition) {
+    deleteOrderdetails(input: $input, condition: $condition) {
       id
       address
       orders
-      payment
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const createPriceTable = /* GraphQL */ `
+  mutation CreatePriceTable(
+    $input: CreatePriceTableInput!
+    $condition: ModelPriceTableConditionInput
+  ) {
+    createPriceTable(input: $input, condition: $condition) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updatePriceTable = /* GraphQL */ `
+  mutation UpdatePriceTable(
+    $input: UpdatePriceTableInput!
+    $condition: ModelPriceTableConditionInput
+  ) {
+    updatePriceTable(input: $input, condition: $condition) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deletePriceTable = /* GraphQL */ `
+  mutation DeletePriceTable(
+    $input: DeletePriceTableInput!
+    $condition: ModelPriceTableConditionInput
+  ) {
+    deletePriceTable(input: $input, condition: $condition) {
+      id
+      itemname
+      price
       createdAt
       updatedAt
       __typename

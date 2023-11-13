@@ -10,6 +10,7 @@ import { Storage } from "aws-amplify";
 
 const Category3 = () => {
   const [itemData, setItemData] = useState([]);
+ window.localStorage.setItem("category", "home&kit");
 
   useEffect(() => {
     const fetchData = async () => {

@@ -3,9 +3,15 @@
 input AMPLIFY {
   globalAuthRule: AuthRule = { allow: public }
 } # FOR TESTING ONLY!
-type Todo @model {
+type Orderdetails @model {
   id: ID!
   address: String!
   orders: String!
-  payment: String!
+ 
 }
+type PriceTable @model {
+  id: ID!
+  itemname:String!
+  price:String!
+}
+

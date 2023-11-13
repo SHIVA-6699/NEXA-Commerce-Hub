@@ -10,7 +10,7 @@ import { Storage } from "aws-amplify";
 
 const Category1 = () => {
   const [itemData, setItemData] = useState([]);
-
+ window.localStorage.setItem("category", "clothes");
   useEffect(() => {
     const fetchData = async () => {
       const data = {
@@ -68,6 +68,8 @@ const Category1 = () => {
 
   function store(value) {
     window.localStorage.setItem("useritem", value);
+   
+    
   }
 
   return (
