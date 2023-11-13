@@ -23,6 +23,9 @@
       },
       "storage": {
         "s3eshopbucket": {}
+      },
+      "api": {
+        "eshopapi": {}
       }
     }
   }

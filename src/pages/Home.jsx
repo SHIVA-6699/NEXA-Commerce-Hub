@@ -101,6 +101,7 @@ const Home = () => {
           </div>
         </div>
       </Col>
+      <hr className="mt-5"/>
       <Contact/>
       <BottomNavbar />
     </>
