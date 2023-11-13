@@ -16,6 +16,7 @@ const HomepageAlbum = () => {
     item5: img5,
     item6: img6,
   };
+    window.localStorage.setItem("cartnum", -1);
 
   return (
     <>

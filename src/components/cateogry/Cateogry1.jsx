@@ -99,7 +99,7 @@ const Category1 = () => {
                 <Link to={"/Cart"} className="">
                   <Button
                     variant=""
-                    style={{ background: "#8700ff" }}
+                    style={{ background: "#163A66" }}
                     className="text-white"
                     onClick={() => store(item.value)}
                   >

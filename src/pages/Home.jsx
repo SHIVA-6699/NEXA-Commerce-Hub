@@ -10,6 +10,7 @@ import HomePageSlide1 from "../components/HomePageSlide1";
 import HomepageSlide2 from "../components/HomepageSlide2";
 import NewProducts from "../components/NewProducts";
 import ExsitingProductiHome from "../components/ExsitingProductHome";
+import Contact from "./Contact";
 
 const Home = () => {
   const [email, setemail] = useState("");
@@ -100,6 +101,7 @@ const Home = () => {
           </div>
         </div>
       </Col>
+      <Contact/>
       <BottomNavbar />
     </>
   );

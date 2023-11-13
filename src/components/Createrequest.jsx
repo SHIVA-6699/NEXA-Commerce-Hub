@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import BottomNavbar from "./BottomNavbar";
 const Createrequest = () => {
   const category = {
-    "/Cateogry1": "value1",
+    "/Cateogry1": "Fashion",
     "/Cateogry2": "value2",
     "/Cateogry3": "value3",
     "/Cateogry4": "value4",
