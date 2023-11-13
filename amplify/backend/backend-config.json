@@ -51,5 +51,12 @@
         }
       ]
     }
+  },
+  "storage": {
+    "s3eshopbucket": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
   }
 }

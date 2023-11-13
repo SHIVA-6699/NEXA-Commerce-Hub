@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import img4 from '../assets/ExsitingImages/img5.jpg'
 import img5 from '../assets/ExsitingImages/img6.jpg'
 import { Image } from 'react-bootstrap'
+
 import '../index.css'
 const ExsitingProductiHome=()=>{
     const images=[
@@ -21,7 +22,7 @@ const ExsitingProductiHome=()=>{
             <h3 style={{ color: "#163A66" }} className="mb-4 m-4 ms-5">
               Featured
             </h3>
-            <Link className="p-4 m-4 ms-5" to="/ExistingProducts" style={{ textDecoration: "none" }}>
+            <Link className="p-4 m-4 ms-5" to="/Viewproducts" style={{ textDecoration: "none" }}>
               <h6 style={{ color: "#163A66" }} className=" viewtag">
                 View More
               </h6>
@@ -36,7 +37,7 @@ const ExsitingProductiHome=()=>{
                 width={240}
                 height={200}
                 style={{ objectFit: "cover", objectPosition: "center" }}
-                className="shadow-lg"
+                className="shadow-lg exsimg"
                 loading="lazy"
                 rounded
               />

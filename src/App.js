@@ -15,25 +15,25 @@ import Cateogry7 from "./components/cateogry/Cateogry7.jsx";
 import Cateogry8 from "./components/cateogry/Cateogry8.jsx";
 import Cateogry9 from "./components/cateogry/Cateogry9.jsx";
 import Cateogry10 from "./components/cateogry/Cateogry10.jsx";
+import Viewproducts from "./pages/Viewproducts.jsx";
 import Cart from "./components/Cart.jsx";
 import Cartside from "./pages/CartSlilde.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import QrCode from "./components/Qrcode.jsx";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "./components/Loading.jsx";
-
-
 
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
-    const [appLoaded, setAppLoaded] = useState(false);
-      useEffect(() => {
-        const initializeApp = async () => {
-          setAppLoaded(true);
-        };
-        initializeApp();
-      }, []);
+  const [appLoaded, setAppLoaded] = useState(false);
+  useEffect(() => {
+    const initializeApp = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 3500));
+      setAppLoaded(true);
+    };
+    initializeApp();
+  }, []);
   if (!appLoaded) {
     return <Loading />;
   }
@@ -59,6 +59,7 @@ function App({ signOut, user }) {
           <Route path="/Cartside" element={<Cartside />}></Route>
           <Route path="/Checkout" element={<Checkout />}></Route>
           <Route path="/QrCode" element={<QrCode />}></Route>
+          <Route path="/Viewproducts" element={<Viewproducts />}></Route>
         </Routes>
       </BrowserRouter>
     </>

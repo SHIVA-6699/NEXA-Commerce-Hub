@@ -20,6 +20,9 @@
       },
       "auth": {
         "amplifyreactappd6fcfaf8": {}
+      },
+      "storage": {
+        "s3eshopbucket": {}
       }
     }
   }

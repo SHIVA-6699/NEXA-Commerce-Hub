@@ -23,3 +23,11 @@
   width:50rem;
    
 }
+.cloimg
+{
+  scale: 1 1;
+}
+.cloimg:hover
+{
+  scale: 2 2;
+}

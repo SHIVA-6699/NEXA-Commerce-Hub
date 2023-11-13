@@ -21,7 +21,7 @@ const HomepageAlbum = () => {
     <>
       <div className="d-flex justify-content-center ">
         <Row className="mt-5">
-          <Col sm={12} lg={6} className="d-flex justify-content-center pe-5 ">
+          <Col sm={12} lg={6} className="d-flex justify-content-between  pe-5 ">
             <div className="mt-5">
               <div>
                 <h2 className="h1 w-100" style={{ color: "#0a4b9b" }}>

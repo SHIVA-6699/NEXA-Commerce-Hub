@@ -134,3 +134,14 @@ transition:  scale 450ms;
 {
   scale: 1 1;
 }
+
+/* exisiting page */
+.exsimg
+{
+  scale: 1;
+}
+.exsimg:hover
+{
+  scale: 1.05;
+  box-shadow: 2px 2px 2px 2px green;
+}

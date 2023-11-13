@@ -3,7 +3,7 @@ const Loading = () => {
   return (
     <>
       <div className="main">
-        <h1>
+        <h1 className="loadingh1">
           <span className="let1">l</span>
           <span className="let2">o</span>
           <span className="let3">a</span>
