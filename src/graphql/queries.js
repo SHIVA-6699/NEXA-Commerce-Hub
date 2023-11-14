@@ -65,3 +65,43 @@ export const listPriceTables = /* GraphQL */ `
     }
   }
 `;
+export const getOrderdetails1 = /* GraphQL */ `
+  query GetOrderdetails1($orders: String!) {
+    getOrderdetails1(orders: $orders) {
+      id
+      address
+      orders
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const listOrderdetails1s = /* GraphQL */ `
+  query ListOrderdetails1s(
+    $orders: String
+    $filter: ModelOrderdetails1FilterInput
+    $limit: Int
+    $nextToken: String
+    $sortDirection: ModelSortDirection
+  ) {
+    listOrderdetails1s(
+      orders: $orders
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      sortDirection: $sortDirection
+    ) {
+      items {
+        id
+        address
+        orders
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;

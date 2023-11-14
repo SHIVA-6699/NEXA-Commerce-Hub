@@ -22,7 +22,7 @@ import Checkout from "./pages/Checkout.jsx";
 import QrCode from "./components/Qrcode.jsx";
 import { useEffect, useState } from "react";
 import Loading from "./components/Loading.jsx";
-
+import Orders from "./pages/Orders.jsx";
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
@@ -60,6 +60,7 @@ function App({ signOut, user }) {
           <Route path="/Checkout" element={<Checkout />}></Route>
           <Route path="/QrCode" element={<QrCode />}></Route>
           <Route path="/Viewproducts" element={<Viewproducts />}></Route>
+          <Route path="/Orders" element={<Orders/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

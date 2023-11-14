@@ -85,3 +85,45 @@ export const onDeletePriceTable = /* GraphQL */ `
     }
   }
 `;
+export const onCreateOrderdetails1 = /* GraphQL */ `
+  subscription OnCreateOrderdetails1(
+    $filter: ModelSubscriptionOrderdetails1FilterInput
+  ) {
+    onCreateOrderdetails1(filter: $filter) {
+      id
+      address
+      orders
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateOrderdetails1 = /* GraphQL */ `
+  subscription OnUpdateOrderdetails1(
+    $filter: ModelSubscriptionOrderdetails1FilterInput
+  ) {
+    onUpdateOrderdetails1(filter: $filter) {
+      id
+      address
+      orders
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteOrderdetails1 = /* GraphQL */ `
+  subscription OnDeleteOrderdetails1(
+    $filter: ModelSubscriptionOrderdetails1FilterInput
+  ) {
+    onDeleteOrderdetails1(filter: $filter) {
+      id
+      address
+      orders
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;

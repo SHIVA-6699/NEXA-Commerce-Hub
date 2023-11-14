@@ -43,10 +43,7 @@ const Hedaer = () => {
         <Offcanvas show={show} onHide={handleclose}>
           <Offcanvas.Header closeButton className=""></Offcanvas.Header>
           <Offcanvas.Body>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis,
-            nostrum. Eveniet molestias sint placeat adipisci fuga facere
-            voluptatem maiores sunt repellat. Neque perspiciatis cum corporis
-            quod voluptates numquam. Modi, provident?
+            <Link to={"/Orders"}>Orders</Link>
           </Offcanvas.Body>
         </Offcanvas>
         <div className="float-end sticky-top">

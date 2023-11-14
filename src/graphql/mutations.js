@@ -91,3 +91,48 @@ export const deletePriceTable = /* GraphQL */ `
     }
   }
 `;
+export const createOrderdetails1 = /* GraphQL */ `
+  mutation CreateOrderdetails1(
+    $input: CreateOrderdetails1Input!
+    $condition: ModelOrderdetails1ConditionInput
+  ) {
+    createOrderdetails1(input: $input, condition: $condition) {
+      id
+      address
+      orders
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updateOrderdetails1 = /* GraphQL */ `
+  mutation UpdateOrderdetails1(
+    $input: UpdateOrderdetails1Input!
+    $condition: ModelOrderdetails1ConditionInput
+  ) {
+    updateOrderdetails1(input: $input, condition: $condition) {
+      id
+      address
+      orders
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deleteOrderdetails1 = /* GraphQL */ `
+  mutation DeleteOrderdetails1(
+    $input: DeleteOrderdetails1Input!
+    $condition: ModelOrderdetails1ConditionInput
+  ) {
+    deleteOrderdetails1(input: $input, condition: $condition) {
+      id
+      address
+      orders
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;

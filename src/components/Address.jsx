@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { API, graphqlOperation } from "aws-amplify";
-import { createOrderdetails } from "../graphql/mutations";
+import { createOrderdetails1 } from "../graphql/mutations";
+import { getOrderdetails1 } from "../graphql/queries";
+import * as queries from "../graphql/queries";
+import * as mutations from "../graphql/mutations";
 
 const Address = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +42,7 @@ const Address = () => {
 
     try {
       await API.graphql(
-        graphqlOperation(createOrderdetails, { input: addressData })
+        graphqlOperation(createOrderdetails1, { input: addressData })
       );
       setAlertVisible(true);
       setDisableButton(true);

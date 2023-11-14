@@ -15,33 +15,28 @@ const Category6 = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = {
-        "Men's Green Round Neck Long Sleeve Sweatshirt. Its blend of comfort, style, and versatility makes it a must-have for every man's closet.":
-          "sweatshirt",
-        "Invest in the timeless appeal of the Casual Navy Check Shirt to effortlessly upgrade your casual wardrobe. Whether you're aiming for a classic or modern look ":
-          "shirts",
-        "The Branded Chest Graphic T-Shirt is more than just clothing; it's a canvas for self-expression. Elevate your wardrobe with this unique and stylish piece that effortlessly combines comfort, quality,":
-          "tshirts",
-        "Men's Navy Blue Super Skinny Fit Low-Rise Heavy Fade Stretchable Jeans.Whether you're aiming for a laid-back vibe or a fashion-forward statement, these jeans are the perfect choice for the modern man who values both style and comfort.":
-          "jeans",
-        "Premium Gray Melange Track Pant. Combining the best of comfort and style, these track pants are a testament to your commitment to quality and fashion":
-          "trackpants",
-        "The Classic Blue Zipper Hoodie, this hoodie seamlessly combines classic design with modern functionality. Elevate your casual wardrobe with this versatile and enduring piece.":
-          "hoodies",
-        "cargo cotton jacket Step into a world of fashion and functionality with our latest jacket. This versatile piece seamlessly blends style with practicality":
-          "jackets",
-        "Effortless Elegance: Slim Fit Men's Black Trousers our Slim Fit Men's Black Trousers, a wardrobe essential that seamlessly combines sophistication with modern flair.":
-          "trousers",
-        "Elevate Your Workout: Men's Polyester Black Gym Shorts, our Men's Gym Shorts in Polyester Black, a fusion of style and functionality crafted to enhance your performance":
-          "shorts",
-        "weather in style with our collection of Sleeveless T-Shirts. These versatile garments are a must-have for the modern wardrobe, offering a perfect balance of comfort and fashion.":
-          "sleevshirt",
+        "Easy Electronics ADXL345 Three 3 Axis Digital Accelerometer Gy-291, Adxl345 Three Axis 3-Axis Gy- 291 + 1 Male Pin Header Adxl345 Digital Three-Axis Acceleration Of Gravity Tilt Module For Arduino Code Iic / Spi.":
+          "accelometer",
+        "Temperature Humidity Sensor Module DHT11 With PCB, 0 to 100% RH. Whether you're aiming for a classic or modern look ":
+          "humidity",
+        "Arduino UNO R3 board with DIP ATmega328, SKU: 2016R3UNO Categories: Modules, Electronics Components Tags: Controller Module, IOT Module":
+          "aurdino",
+        "Jumper Wire - Female to Female 40 Pcs 20 CM, A highly useful connecting wire. It comes with female connectors at both ends, can be used to make quick connections between headerpins, FRC pins":
+          "jumperwires",
+        "The HC-SR501 PIR Motion Detector Sensor Module is a pyroelectric device that detects motion by measuring changes in the infrared levels emitted by surrounding objects. This motion can be detected by checking for a high signal on a single I/O pin.":
+          "PIR",
+        "Raspberry Pi 4 8GB RAM | All New Raspberry Pi Desktop Computer, Brand Raspberry Pi, Model Name : Pi 4":
+          "rassberrypi",
+        "Taiss 1Pcs LJ18A3-8-Z/BX-5V M18 8mm Sensing DC 5V NPN NO（Normally Open） 3D Printer Cylinder inductive Proximity Sensor Switch Work Voltage 5VDC Special for MCU":
+          "sensorswitch",
+        
       };
 
       const itemsWithImages = await Promise.all(
         Object.entries(data).map(async ([key, value]) => {
           try {
             // Try fetching JPG image first
-            const jpgImageUrl = await Storage.get(`clothes/${value}.jpg`, {
+            const jpgImageUrl = await Storage.get(`IOT/${value}.jpg`, {
               expires: 60,
             });
 

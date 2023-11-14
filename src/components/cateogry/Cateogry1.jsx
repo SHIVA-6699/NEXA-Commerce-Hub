@@ -5,12 +5,15 @@ import Header from "../Header";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import BottomNavbar from "../BottomNavbar";
+import { API } from "aws-amplify";
+import * as queries from "../../graphql/queries";
+import { getPriceTable } from "../../graphql/queries";
 import "../../App.css";
 import { Storage } from "aws-amplify";
 
 const Category1 = () => {
   const [itemData, setItemData] = useState([]);
- window.localStorage.setItem("category", "clothes");
+  window.localStorage.setItem("category", "clothes");
   useEffect(() => {
     const fetchData = async () => {
       const data = {
@@ -68,17 +71,18 @@ const Category1 = () => {
 
   function store(value) {
     window.localStorage.setItem("useritem", value);
-   
-    
   }
-
+ const allTodos =  API.graphql({ query: queries.listPriceTables });
   return (
     <>
       <Header />
       <Container className="mb-5 me-5">
         <h5 className="text-center mb-5">Choose Items</h5>
 
-        {itemData.map((item, index) => {
+        {
+        
+        itemData.map((item, index) => {
+
           return (
             <Row className="ms-5 mb-3" key={index}>
               <Col lg={9}>
@@ -94,6 +98,7 @@ const Category1 = () => {
                       fluid
                     />
                     <p className="ms-3">{item.key}</p>
+                    {/* <p>{itemprice}</p> */}
                   </div>
                 )}
               </Col>
