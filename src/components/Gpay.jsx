@@ -3,8 +3,9 @@ import React from "react";
 import { Alert } from "react-bootstrap";
 
 function Gpay() {
-  const price = window.localStorage.getItem("cartnum");
-  const totalprice = price * 100;
+  const cart_num = window.localStorage.getItem("cartnum");
+  const cart_price=window.localStorage.getItem("itemprice");
+    const totalprice = cart_num == 0 ? cart_price : cart_num * cart_price * 2;
   return (
     <>
       <div className="App">

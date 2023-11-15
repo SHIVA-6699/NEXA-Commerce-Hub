@@ -6,8 +6,8 @@ import * as mutations from "../graphql/mutations";
 
 const PricesList = () => {
   const todoDetails = {
-    itemname: "sweatshirt",
-    price: "499",
+    itemname: "sleevshirt",
+    price: "199",
   };
 
   const createTodo = async () => {

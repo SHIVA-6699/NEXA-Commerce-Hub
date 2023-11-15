@@ -62,10 +62,10 @@ const Hedaer = () => {
             <Link to={"/Profile"}>Profile</Link>
             <hr />
             <Link to={"/Createrequest"}>Shop Now</Link>
-            <hr/>
+            <hr />
             <Link to={"/"}>Contact us</Link>
-
           </Offcanvas.Body>
+          <h6 className="text-center">©2023 Nexa</h6>
         </Offcanvas>
         <Image src={Logo} width={100} height={70} />
         <p>{email}</p>

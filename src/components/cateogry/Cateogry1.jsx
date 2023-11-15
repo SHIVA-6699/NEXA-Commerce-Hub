@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Badge, Button, Card, Container, Row, Image } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Header from "../Header";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import BottomNavbar from "../BottomNavbar";
 import { API } from "aws-amplify";
 import * as queries from "../../graphql/queries";
-import { getPriceTable } from "../../graphql/queries";
-import "../../App.css";
 import { Storage } from "aws-amplify";
+import BottomNavbar from "../BottomNavbar";
+
+import "../../App.css";
 
 const Category1 = () => {
   const [itemData, setItemData] = useState([]);
-  window.localStorage.setItem("category", "clothes");
+window.localStorage.setItem("category", "clothes");
   useEffect(() => {
     const fetchData = async () => {
       const data = {
@@ -39,84 +38,82 @@ const Category1 = () => {
           "sleevshirt",
       };
 
-      const itemsWithImages = await Promise.all(
+      const itemsWithPrices = await Promise.all(
         Object.entries(data).map(async ([key, value]) => {
           try {
+            const oneTodo = await API.graphql({
+              query: queries.getPriceTable2,
+              variables: { itemname: value },
+            });
+
+            const price = oneTodo.data?.getPriceTable2?.price;
+
             // Try fetching JPG image first
             const jpgImageUrl = await Storage.get(`clothes/${value}.jpg`, {
               expires: 60,
             });
 
-            return { key, value, imageUrl: jpgImageUrl };
+            return { key, value, imageUrl: jpgImageUrl, price };
           } catch (error) {
-            try {
-              // If JPG image fetch fails, try fetching PNG image
-              const pngImageUrl = await Storage.get(`${value}.png`, {
-                expires: 60,
-              });
-              return { key, value, imageUrl: pngImageUrl };
-            } catch (error) {
-              console.error(`Error fetching image for ${value}:`, error);
-              return { key, value, imageUrl: null };
-            }
+            console.error(`Error fetching data for ${value}:`, error);
+            return { key, value, imageUrl: null, price: null };
           }
         })
       );
 
-      setItemData(itemsWithImages);
+      setItemData(itemsWithPrices);
     };
 
     fetchData();
   }, []);
+  function store(item) {
+    // Create a variable name based on the item's value
+    const variableName = `${item.value}`;
 
-  function store(value) {
-    window.localStorage.setItem("useritem", value);
+    // Store the item price in localStorage
+    window.localStorage.setItem("itemprice", item.price);
+    window.localStorage.setItem("useritem", item.value);
   }
- const allTodos =  API.graphql({ query: queries.listPriceTables });
+console.log(itemData)
   return (
     <>
       <Header />
       <Container className="mb-5 me-5">
         <h5 className="text-center mb-5">Choose Items</h5>
 
-        {
-        
-        itemData.map((item, index) => {
-
-          return (
-            <Row className="ms-5 mb-3" key={index}>
-              <Col lg={9}>
-                {item.imageUrl && (
-                  <div className="d-flex align-items-center justify-content-between">
-                    <Image
-                      src={item.imageUrl}
-                      alt={item.value}
-                      width="50"
-                      height="50"
-                      className="cloimg"
-                      rounded
-                      fluid
-                    />
-                    <p className="ms-3">{item.key}</p>
-                    {/* <p>{itemprice}</p> */}
-                  </div>
-                )}
-              </Col>
-              <Col lg={3} className="d-flex align-items-center">
-                <Link to={"/Cart"} className="">
-                  <Button
-                    variant=""
-                    style={{ background: "#163A66" }}
-                    className="text-white"
-                    onClick={() => store(item.value)}
-                  >
-                    Add to Cart
-                  </Button>
-                </Link>
-              </Col>
-            </Row>
-          );
-        })}
+        {itemData.map((item, index) => (
+          <Row className="ms-5 mb-3" key={index}>
+            <Col lg={9}>
+              {item.imageUrl && (
+                <div className="d-flex align-items-center justify-content-between">
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.value}
+                    width="50"
+                    height="50"
+                    className="cloimg"
+                    rounded
+                    fluid
+                  />
+                  <p className="ms-3">{item.key}</p>
+                  {item.price && <h6>₹{item.price}</h6>}
+                </div>
+              )}
+            </Col>
+            <Col lg={3} className="d-flex align-items-center">
+              <Link to={"/Cart"} className="">
+                <Button
+                  variant=""
+                  style={{ background: "#163A66" }}
+                  className="text-white"
+                  onClick={() => store(item)}
+                >
+                  Add to Cart
+                </Button>
+              </Link>
+            </Col>
+          </Row>
+        ))}
       </Container>
       <BottomNavbar />
     </>

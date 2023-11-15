@@ -23,6 +23,7 @@ import QrCode from "./components/Qrcode.jsx";
 import { useEffect, useState } from "react";
 import Loading from "./components/Loading.jsx";
 import Orders from "./pages/Orders.jsx";
+import Profile from "./pages/Profile.jsx";
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
@@ -61,6 +62,7 @@ function App({ signOut, user }) {
           <Route path="/QrCode" element={<QrCode />}></Route>
           <Route path="/Viewproducts" element={<Viewproducts />}></Route>
           <Route path="/Orders" element={<Orders/>}></Route>
+          <Route path="/Profile" element={<Profile/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
