@@ -1,50 +1,50 @@
-import React, { useState, useEffect } from "react";
-import { Button, Container, Row, Col, Image } from "react-bootstrap";
-import { API } from "aws-amplify";
-import * as queries from "../graphql/queries";
-import * as mutations from "../graphql/mutations";
+import React, { useEffect, useState } from "react";
+import { Storage } from "aws-amplify";
+import { Image } from "react-bootstrap";
+import Loading from "../components/Loading";
 
-const PricesList = () => {
-  const todoDetails = {
-    itemname: "sleevshirt",
-    price: "199",
-  };
+const PriceList = () => {
+  const [imageUrls, setImageUrls] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const createTodo = async () => {
+  const getdata = async () => {
     try {
-      const newTodo = await API.graphql({
-        query: mutations.createPriceTable2,
-        variables: { input: todoDetails },
-      });
-      console.log("New Todo:", newTodo);
-    } catch (error) {
-      console.error("Error creating todo:", error);
-      // Handle the error or ignore it if you don't want to log it
+      const { results } = await Storage.list("", { pageSize: "ALL" });
+      console.log("Results:", results); // Check the results in the console
+      if (results.length > 0) {
+        const urls = await Promise.all(
+          results.map(async (result) => {
+            return await Storage.get(result.key);
+          })
+        );
+        console.log("Image URLs:", urls); // Check the image URLs in the console
+        setImageUrls(urls);
+      } else {
+        console.log("No files found.");
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    createTodo();
-    fetchOneTodo(); // Call the function to fetch one todo after creating a new one
-  }, []); // Run this effect only once when the component mounts
-
-  const fetchOneTodo = async () => {
-    try {
-      const oneTodo = await API.graphql({
-        query: queries.getPriceTable2,
-        variables: { itemname: "sweatshirt" },
-      });
-      console.log("One Tododata:", oneTodo.data.getPriceTable2.price);
-    } catch (error) {
-      console.error("Error fetching one todo:", error);
-      // Handle the error or ignore it if you don't want to log it
-    }
-  };
+    getdata();
+  }, []);
 
   return (
-    // Your JSX code here
-    <></>
+    <>
+    <h3 className="text-center mt-5 mb-5">Store Products</h3>
+    <div className="d-flex flex-wrap gap-5 mt-5 justify-content-center border  border-2 m-4 p-4 rounded">
+      {loading && <Loading/>}
+      {!loading &&
+        imageUrls.map((imageUrl, index) => (
+          <Image key={index} src={imageUrl} alt={`Image ${index + 1}`} width={200} height={200} rounded/>
+          ))}
+    </div>
+          </>
   );
 };
 
-export default PricesList;
+export default PriceList;
