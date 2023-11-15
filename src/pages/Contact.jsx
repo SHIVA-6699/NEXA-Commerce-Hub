@@ -84,7 +84,7 @@ const Contact = () => {
         
         height="350"
         style={{"border":"0"}}
-        allowFullscreen=""
+        allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         ></iframe>

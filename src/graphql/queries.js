@@ -105,3 +105,83 @@ export const listOrderdetails1s = /* GraphQL */ `
     }
   }
 `;
+export const getPriceTable1 = /* GraphQL */ `
+  query GetPriceTable1($price: String!) {
+    getPriceTable1(price: $price) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const listPriceTable1s = /* GraphQL */ `
+  query ListPriceTable1s(
+    $price: String
+    $filter: ModelPriceTable1FilterInput
+    $limit: Int
+    $nextToken: String
+    $sortDirection: ModelSortDirection
+  ) {
+    listPriceTable1s(
+      price: $price
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      sortDirection: $sortDirection
+    ) {
+      items {
+        id
+        itemname
+        price
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
+export const getPriceTable2 = /* GraphQL */ `
+  query GetPriceTable2($itemname: String!) {
+    getPriceTable2(itemname: $itemname) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const listPriceTable2s = /* GraphQL */ `
+  query ListPriceTable2s(
+    $itemname: String
+    $filter: ModelPriceTable2FilterInput
+    $limit: Int
+    $nextToken: String
+    $sortDirection: ModelSortDirection
+  ) {
+    listPriceTable2s(
+      itemname: $itemname
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      sortDirection: $sortDirection
+    ) {
+      items {
+        id
+        itemname
+        price
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;

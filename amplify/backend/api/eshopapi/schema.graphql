@@ -8,8 +8,7 @@ type Orderdetails @model {
   address: String!
   orders: String!
 }
-type PriceTable
-  @model {
+type PriceTable @model {
   id: ID!
   itemname: String!
   price: String!
@@ -19,6 +18,14 @@ type Orderdetails1 @model {
   address: String!
   orders: String! @primaryKey
 }
+type PriceTable1 @model {
+  id: ID!
+  itemname: String!
+  price: String! @primaryKey
+}
 
-
-
+type PriceTable2 @model {
+  id: ID!
+  itemname: String! @primaryKey
+  price: String!
+}

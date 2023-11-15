@@ -136,3 +136,93 @@ export const deleteOrderdetails1 = /* GraphQL */ `
     }
   }
 `;
+export const createPriceTable1 = /* GraphQL */ `
+  mutation CreatePriceTable1(
+    $input: CreatePriceTable1Input!
+    $condition: ModelPriceTable1ConditionInput
+  ) {
+    createPriceTable1(input: $input, condition: $condition) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updatePriceTable1 = /* GraphQL */ `
+  mutation UpdatePriceTable1(
+    $input: UpdatePriceTable1Input!
+    $condition: ModelPriceTable1ConditionInput
+  ) {
+    updatePriceTable1(input: $input, condition: $condition) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deletePriceTable1 = /* GraphQL */ `
+  mutation DeletePriceTable1(
+    $input: DeletePriceTable1Input!
+    $condition: ModelPriceTable1ConditionInput
+  ) {
+    deletePriceTable1(input: $input, condition: $condition) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const createPriceTable2 = /* GraphQL */ `
+  mutation CreatePriceTable2(
+    $input: CreatePriceTable2Input!
+    $condition: ModelPriceTable2ConditionInput
+  ) {
+    createPriceTable2(input: $input, condition: $condition) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updatePriceTable2 = /* GraphQL */ `
+  mutation UpdatePriceTable2(
+    $input: UpdatePriceTable2Input!
+    $condition: ModelPriceTable2ConditionInput
+  ) {
+    updatePriceTable2(input: $input, condition: $condition) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deletePriceTable2 = /* GraphQL */ `
+  mutation DeletePriceTable2(
+    $input: DeletePriceTable2Input!
+    $condition: ModelPriceTable2ConditionInput
+  ) {
+    deletePriceTable2(input: $input, condition: $condition) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;

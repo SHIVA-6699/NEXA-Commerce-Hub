@@ -6,14 +6,14 @@ import * as mutations from "../graphql/mutations";
 
 const PricesList = () => {
   const todoDetails = {
-    address: "Todo 7",
-    orders: "Learn AWS AppSyn32c4",
+    itemname: "sweatshirt",
+    price: "499",
   };
 
   const createTodo = async () => {
     try {
       const newTodo = await API.graphql({
-        query: mutations.createOrderdetails1,
+        query: mutations.createPriceTable2,
         variables: { input: todoDetails },
       });
       console.log("New Todo:", newTodo);
@@ -31,10 +31,10 @@ const PricesList = () => {
   const fetchOneTodo = async () => {
     try {
       const oneTodo = await API.graphql({
-        query: queries.getOrderdetails1,
-        variables: { orders: "Learn AWS AppSync" },
+        query: queries.getPriceTable2,
+        variables: { itemname: "sweatshirt" },
       });
-      console.log("One Tododata:", oneTodo);
+      console.log("One Tododata:", oneTodo.data.getPriceTable2.price);
     } catch (error) {
       console.error("Error fetching one todo:", error);
       // Handle the error or ignore it if you don't want to log it

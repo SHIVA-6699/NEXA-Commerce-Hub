@@ -127,3 +127,87 @@ export const onDeleteOrderdetails1 = /* GraphQL */ `
     }
   }
 `;
+export const onCreatePriceTable1 = /* GraphQL */ `
+  subscription OnCreatePriceTable1(
+    $filter: ModelSubscriptionPriceTable1FilterInput
+  ) {
+    onCreatePriceTable1(filter: $filter) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdatePriceTable1 = /* GraphQL */ `
+  subscription OnUpdatePriceTable1(
+    $filter: ModelSubscriptionPriceTable1FilterInput
+  ) {
+    onUpdatePriceTable1(filter: $filter) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeletePriceTable1 = /* GraphQL */ `
+  subscription OnDeletePriceTable1(
+    $filter: ModelSubscriptionPriceTable1FilterInput
+  ) {
+    onDeletePriceTable1(filter: $filter) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onCreatePriceTable2 = /* GraphQL */ `
+  subscription OnCreatePriceTable2(
+    $filter: ModelSubscriptionPriceTable2FilterInput
+  ) {
+    onCreatePriceTable2(filter: $filter) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdatePriceTable2 = /* GraphQL */ `
+  subscription OnUpdatePriceTable2(
+    $filter: ModelSubscriptionPriceTable2FilterInput
+  ) {
+    onUpdatePriceTable2(filter: $filter) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeletePriceTable2 = /* GraphQL */ `
+  subscription OnDeletePriceTable2(
+    $filter: ModelSubscriptionPriceTable2FilterInput
+  ) {
+    onDeletePriceTable2(filter: $filter) {
+      id
+      itemname
+      price
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;

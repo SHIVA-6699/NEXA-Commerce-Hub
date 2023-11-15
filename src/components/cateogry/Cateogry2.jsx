@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge, Button, Card, Container, Row, Image } from "react-bootstrap";
+import {  Button, Container, Row, Image } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Header from "../Header";
 import { Link } from "react-router-dom";
@@ -111,8 +111,9 @@ const Category2 = () => {
                 </Link>
               </Col>
             </Row>
-          );
-        })}
+           
+           );
+          })}
       </Container>
       <BottomNavbar />
     </>
