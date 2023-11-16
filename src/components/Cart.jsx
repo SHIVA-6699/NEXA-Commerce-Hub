@@ -50,7 +50,7 @@ const Cart = () => {
               }}
               className="mx-3 border-0"
               disabled={count === 5}
-              style={{ background: "#8700ff" }}
+              style={{ background: "#163a66" }}
             >
               +
             </Button>
@@ -67,7 +67,7 @@ const Cart = () => {
                 window.localStorage.setItem("cartnum", count);
               }}
               disabled={count === 0}
-              style={{ background: "#8700ff" }}
+              style={{ background: "#163a66" }}
             >
               -
             </Button>
@@ -81,9 +81,9 @@ const Cart = () => {
             style={{ marginTop: "18rem" }}
           >
             <Button
-              className="col-4 text-white"
+              className="col-4 text-white rounded rounded-5"
               variant=""
-              style={{ background: "#8700ff" }}
+              style={{ background: "#163a66" }}
             >
               Buy
             </Button>

@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button, Alert } from "react-bootstrap";
+import { Form, Button, Alert, Toast, ToastContainer } from "react-bootstrap";
 import { API, graphqlOperation } from "aws-amplify";
 import { createOrderdetails1 } from "../graphql/mutations";
-import { getOrderdetails1 } from "../graphql/queries";
-import * as queries from "../graphql/queries";
-import * as mutations from "../graphql/mutations";
 
 const Address = () => {
   const [formData, setFormData] = useState({
@@ -13,16 +10,20 @@ const Address = () => {
     stateCity: "",
     pincode: "",
   });
-  const [item, setItem] = useState(""); // State to hold the value from localStorage
+  const [item, setItem] = useState("");
   const [alertVisible, setAlertVisible] = useState(false);
+  const [toastVisible, setToastVisible] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
-  const [count, setCount] = useState(0);
+  const [error, seterror] = useState("");
 
   useEffect(() => {
-    // Load data from localStorage when the component mounts
-    const storedItem = window.localStorage.getItem("useritem");
-    setItem(storedItem || "");
-  }, []); // The empty dependency array ensures that this effect runs only once on mount
+    try {
+      const storedItem = window.localStorage.getItem("useritem");
+      setItem(storedItem || "");
+    } catch (error) {
+      console.error("Error retrieving useritem from local storage:", error);
+    }
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,9 +36,8 @@ const Address = () => {
   const addAddress = async () => {
     const orderId = generateRandomOrderId();
     const addressData = {
-      id: orderId,
       address: `${formData.houseNo} ${formData.streetName} ${formData.stateCity} ${formData.pincode}`,
-      orders: item, // Use the latest value of 'item' from state
+      orders: item,
     };
 
     try {
@@ -46,9 +46,15 @@ const Address = () => {
       );
       setAlertVisible(true);
       setDisableButton(true);
-      setCount(count + 1);
+      setToastVisible(true);
+
+      // Hide the toast after 2 seconds
+      setTimeout(() => {
+        setToastVisible(false);
+      }, 4000);
     } catch (error) {
       console.error("Error adding address:", error);
+      seterror("Server Busy Try again Later");
     }
   };
 
@@ -100,10 +106,9 @@ const Address = () => {
             value={formData.pincode}
             onChange={handleInputChange}
           />
-
           {/* ... (other form controls) */}
 
-          {alertVisible && (
+          {alertVisible === true ? (
             <Alert
               variant="success"
               onClose={() => setAlertVisible(false)}
@@ -111,6 +116,25 @@ const Address = () => {
             >
               Address successfully saved!
             </Alert>
+          ) : (
+            <p className="text-danger">{error}</p>
+          )}  
+
+          {toastVisible && (
+            <ToastContainer position="top-end">
+              <Toast onClose={() => setToastVisible(false)} className="m-5">
+                <Toast.Header>
+                  <img
+                    src="holder.js/20x20?text=%20"
+                    className="rounded me-2"
+                    alt=""
+                  />
+                  <strong className="me-auto">Bootstrap</strong>
+                  <small>Few seconds ago</small>
+                </Toast.Header>
+                <Toast.Body className="text-success">Your Address Succssfully saved Please Continue Payment Section</Toast.Body>
+              </Toast>
+            </ToastContainer>
           )}
 
           <Button className="m-3" onClick={addAddress} disabled={disableButton}>

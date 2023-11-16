@@ -43,7 +43,7 @@ const Viewproducts = () => {
             <Image
               key={index}
               src={imageUrl}
-              alt={`Image ${index + 1}`}
+              alt={`Image ${index + 1} Loading..`}
               width={200}
               height={200}
               rounded

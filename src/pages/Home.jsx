@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Form, InputGroup } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
+import '../Button.css'
 import { Auth } from "aws-amplify";
 import { Link } from "react-router-dom";
+import '../Button.css'
 import Hedaer from "../components/Header";
 import BottomNavbar from "../components/BottomNavbar";
 import HomepageAlbum from "../components/HomepageAlbum";
@@ -44,9 +46,9 @@ const Home = () => {
       <div>
         <NewProducts />
       </div>
-      <div className="shop-container m-auto rounded-5">
-        <Link to={"/Createrequest"} className="shop-link">
-          <h5 className="text-center text-white">Shop Now</h5>
+      <div class="container shine-btn text-center">
+        <Link to={"/Createrequest"} className="btn btn-anim">
+          <h5 className="text-center text-white ">Shop Now</h5>
         </Link>
       </div>
       <hr className="mt-5" />
