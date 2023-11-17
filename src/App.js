@@ -25,6 +25,8 @@ import Loading from "./components/Loading.jsx";
 import Orders from "./pages/Orders.jsx";
 import Profile from "./pages/Profile.jsx";
 import Feedback from "./pages/Feedback.jsx";
+import AdminPanel from "./Admin/LandingPage.jsx";
+import Dashboard from "./Admin/Dashboard.jsx";
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
@@ -64,7 +66,10 @@ function App({ signOut, user }) {
           <Route path="/Viewproducts" element={<Viewproducts />}></Route>
           <Route path="/Orders" element={<Orders/>}></Route>
           <Route path="/Profile" element={<Profile/>}></Route>
+          <Route path="/Profile" element={<Profile/>}></Route>
           <Route path="/Feedback" element={<Feedback/>}></Route>
+          <Route path="/Admin" element={<AdminPanel/>}></Route>
+          <Route path="/Dashboard" element={<Dashboard/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

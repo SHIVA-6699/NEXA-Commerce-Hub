@@ -23,7 +23,7 @@ const ExsitingProductiHome=()=>{
               Featured
             </h3>
             <Link className="p-4 m-4 ms-5" to="/Viewproducts" style={{ textDecoration: "none" }}>
-              <h6 style={{ color: "#163A66" }} className=" viewtag">
+              <h6 style={{ color: "#163A66" }} className="viewtag">
                 View More
               </h6>
             </Link> 

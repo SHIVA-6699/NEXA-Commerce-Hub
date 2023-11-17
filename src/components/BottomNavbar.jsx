@@ -36,6 +36,7 @@ const BottomNavbar = () => {
                 </Col>
                 <Col md={6}>
                   <Link
+                    to={"/Orders"}
                     style={{ background: "#163A66" }}
                     className="p-2 rounded"
                   >
