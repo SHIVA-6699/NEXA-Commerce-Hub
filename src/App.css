@@ -32,3 +32,31 @@
   scale: 2 2;
 }
 /* styles.css */
+.singout-btn {
+  color: black;
+  background-color: none;
+  padding: 0rem 2rem;
+  border: 2px solid #163A66 !important;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.singout-hide {
+  content: '';
+  width: 10rem;
+  overflow: hidden;
+  height: 10rem;
+  background-color: #163A66;
+  position: absolute;
+  right: 8rem;
+  transition: transform .7s ease-in-out;
+  z-index: -1; /* Add this line to send the background behind the content */
+}
+
+.singout-btn:hover .singout-hide {
+  transform: translateX(8rem);
+}

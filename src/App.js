@@ -24,6 +24,7 @@ import { useEffect, useState } from "react";
 import Loading from "./components/Loading.jsx";
 import Orders from "./pages/Orders.jsx";
 import Profile from "./pages/Profile.jsx";
+import Feedback from "./pages/Feedback.jsx";
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
@@ -63,6 +64,7 @@ function App({ signOut, user }) {
           <Route path="/Viewproducts" element={<Viewproducts />}></Route>
           <Route path="/Orders" element={<Orders/>}></Route>
           <Route path="/Profile" element={<Profile/>}></Route>
+          <Route path="/Feedback" element={<Feedback/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

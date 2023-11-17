@@ -211,3 +211,60 @@ export const onDeletePriceTable2 = /* GraphQL */ `
     }
   }
 `;
+export const onCreateFeedback = /* GraphQL */ `
+  subscription OnCreateFeedback($filter: ModelSubscriptionFeedbackFilterInput) {
+    onCreateFeedback(filter: $filter) {
+      id
+      name
+      email
+      message
+      file {
+        bucket
+        key
+        region
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateFeedback = /* GraphQL */ `
+  subscription OnUpdateFeedback($filter: ModelSubscriptionFeedbackFilterInput) {
+    onUpdateFeedback(filter: $filter) {
+      id
+      name
+      email
+      message
+      file {
+        bucket
+        key
+        region
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteFeedback = /* GraphQL */ `
+  subscription OnDeleteFeedback($filter: ModelSubscriptionFeedbackFilterInput) {
+    onDeleteFeedback(filter: $filter) {
+      id
+      name
+      email
+      message
+      file {
+        bucket
+        key
+        region
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;

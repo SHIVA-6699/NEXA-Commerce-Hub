@@ -1,4 +1,5 @@
 import { Row, Col, ListGroup } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <>
@@ -9,10 +10,10 @@ const Contact = () => {
               <h6 className="text-center">ABOUT</h6>
 
               <ListGroup variant="flush" className="text-start">
-                <ListGroup.Item>Contact Us</ListGroup.Item>
-                <ListGroup.Item>About Us</ListGroup.Item>
-                <ListGroup.Item>Careers</ListGroup.Item>
-                <ListGroup.Item>Press</ListGroup.Item>
+                <ListGroup.Item  className="text-center"><Link to={'/Feedback'} className="me-0">Contact Us:</Link></ListGroup.Item>
+                <ListGroup.Item className="text-center">About Us</ListGroup.Item>
+                <ListGroup.Item className="text-center">Careers</ListGroup.Item>
+                <ListGroup.Item className="text-center">Press</ListGroup.Item>
               </ListGroup>
             </div>
           </Col>

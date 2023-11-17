@@ -51,7 +51,7 @@ const Address = () => {
       // Hide the toast after 2 seconds
       setTimeout(() => {
         setToastVisible(false);
-      }, 4000);
+      }, 10000);
     } catch (error) {
       console.error("Error adding address:", error);
       seterror("Server Busy Try again Later");

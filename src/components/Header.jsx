@@ -62,10 +62,10 @@ const Hedaer = () => {
             <Link to={"/Profile"}>Profile</Link>
             <hr />
             <Link to={"/Viewproducts"}>View All Products</Link>
-            <hr/>
+            <hr />
             <Link to={"/Createrequest"}>Shop Now</Link>
             <hr />
-            <Link to={"/"}>Contact us</Link>
+            <Link to={"/Feedback"}>Contact us</Link>
           </Offcanvas.Body>
           <h6 className="text-center m-3">©2023 Nexa</h6>
         </Offcanvas>
@@ -109,10 +109,10 @@ const Hedaer = () => {
           </Link>
           <Button
             onClick={signOut}
-            className=" m-3 border-0 sticky-top"
-            style={{ background: "#163A66" }}
+            className="m-3 border-0 sticky-top rounded rounded-5 singout-btn text-center bg-light"
           >
-            Signout
+            <div className="singout-hide text-center"></div>
+            <div className="text-center z-5">Signout</div>
           </Button>
         </div>
       </div>
