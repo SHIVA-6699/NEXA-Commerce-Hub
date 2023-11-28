@@ -5,11 +5,13 @@ import img3 from "../assets/CardImages/img3.jpg";
 import img4 from "../assets/CardImages/img4.jpg";
 import img5 from "../assets/CardImages/img5.jpg";
 import img6 from "../assets/CardImages/img6.jpg";
+import "../Sass/componet.scss";
 import "../index.css";
 const NewProducts = () => {
+    const global_color = "$primay";
   return (
     <>
-      <h3 className="text-center mb-5" style={{ color: "#163A66" }}>
+      <h3 className="text-center mb-5 global" style={{ color: global_color}}>
         Newly Lanuched Products
       </h3>
       <div className="d-flex justify-content-center flex-wrap gap-5 mb-5">

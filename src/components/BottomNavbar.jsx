@@ -1,14 +1,20 @@
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "../Sass/varaibles.scss";
+import "../Sass/Bottom.scss";
+
 
 const BottomNavbar = () => {
+    
   return (
     <>
       <Navbar
         expand="lg"
-        className="bg-body-tertiary shadow-lg w-100"
+        className="bg-body-tertiary shadow-lg w-100 bottom-navbar"
         style={{ height: "3.5rem" }}
         fixed="bottom"
+       
+        bg="dark"
       >
         <Container className="w-100 d-flex justify-content-evenly gap-5">
           <Nav className="">
@@ -45,7 +51,6 @@ const BottomNavbar = () => {
                       width="32"
                       height="32"
                       viewBox="0 0 24 24"
-                      
                     >
                       <path
                         fill="#ffffff"

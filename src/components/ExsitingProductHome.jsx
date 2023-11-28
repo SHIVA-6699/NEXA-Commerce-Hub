@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom'
 import img4 from '../assets/ExsitingImages/img5.jpg'
 import img5 from '../assets/ExsitingImages/img6.jpg'
 import { Image } from 'react-bootstrap'
-
+import "../Sass/componet.scss";
 import '../index.css'
 const ExsitingProductiHome=()=>{
+    const global_color = "$primay";
     const images=[
         img1,
         img2,
@@ -19,11 +20,11 @@ const ExsitingProductiHome=()=>{
       <>
         <div style={{ marginBottom: "8rem" }}>
           <div className="d-flex justify-content-between">
-            <h3 style={{ color: "#163A66" }} className="mb-4 m-4 ms-5">
+            <h3 style={{ color: global_color }} className="mb-4 m-4 ms-5 global">
               Featured
             </h3>
-            <Link className="p-4 m-4 ms-5" to="/Viewproducts" style={{ textDecoration: "none" }}>
-              <h6 style={{ color: "#163A66" }} className="viewtag">
+            <Link className="p-4 m-4 ms-5 global" to="/Viewproducts" style={{ textDecoration: "none" }}>
+              <h6 style={{ color: global_color }} className="viewtag">
                 View More
               </h6>
             </Link> 

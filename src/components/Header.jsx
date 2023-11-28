@@ -6,6 +6,7 @@ import awsExports from "../aws-exports";
 import App from "../App";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.jpg";
+import Theme from "./DarkMode";
 Amplify.configure(awsExports);
 
 const Hedaer = () => {
@@ -54,7 +55,7 @@ const Hedaer = () => {
 
         <Offcanvas show={show} onHide={handleclose}>
           <Offcanvas.Header closeButton className="float-end ms-auto m-2">
-            {email}
+            <Theme/>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Link to={"/Orders"}>Orders</Link>

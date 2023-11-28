@@ -16,6 +16,8 @@
     "react-drag-drop-files": "^2.3.10",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.3",
+    "sass": "^1.69.5",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

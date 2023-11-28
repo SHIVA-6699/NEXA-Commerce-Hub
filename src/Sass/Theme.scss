@@ -1,0 +1,19 @@
+@import './varaibles.scss';
+$global-text:#163A66;
+@mixin Theme($lightTheme)
+{
+    @if $lightTheme
+    {
+        background-color: darken($color: #000000, $amount: 100%);
+        color: lighten($color: #ffff, $amount: 100%);
+        .global
+        {
+            color: $darkmode-color;
+        }
+    }
+}
+.light
+{
+  
+   @include Theme($lightTheme: true);
+}

@@ -4,10 +4,12 @@ import img3 from "../assets/HomePageAlbumImages/img3.jpg";
 import img4 from "../assets/HomePageAlbumImages/img4.jpg";
 import img5 from "../assets/HomePageAlbumImages/img5.png";
 import img6 from "../assets/HomePageAlbumImages/img6.png";
+import '../Sass/componet.scss';
 import { Image, Row, Col } from "react-bootstrap";
 import "../index.css";
 
 const HomepageAlbum = () => {
+  const global_color = "$primay";
   const images = {
     item1: img1,
     item2: img2,
@@ -25,12 +27,12 @@ const HomepageAlbum = () => {
           <Col sm={12} lg={6} className="d-flex justify-content-between  pe-5 ">
             <div className="mt-5">
               <div>
-                <h2 className="h1 w-100" style={{ color: "#0a4b9b" }}>
+                <h2 className="h1 w-100 global" >
                   Your One-Stop
                 </h2>
               </div>
               <div>
-                <h3 className="" style={{ color: "#163A66" }}>
+                <h3 className="" style={{ color: global_color }}>
                   E-Commerce, Destination
                 </h3>
               </div>
@@ -43,11 +45,11 @@ const HomepageAlbum = () => {
                 }}
               />
               <p
-                className=""
+                className="global"
                 style={{
                   width: "20rem",
                   "text-align": "justify",
-                  color: "#163A66",
+                  color:global_color,
                 }}
               >
                 Our e-commerce website offers a vast marketplace where you can

@@ -5,11 +5,13 @@ import img3 from "../assets/HomePageSlide2/img3.jpg";
 import img4 from "../assets/HomePageSlide2/img4.jpg";
 import img5 from "../assets/HomePageSlide2/img5.jpg";
 import img6 from "../assets/HomePageSlide2/img6.jpg";
+import "../Sass/componet.scss";
 import "../index.css";
 import { Image, Col, Row, Carousel } from "react-bootstrap";
 const images = [img1, img2, img3];
 const images2 = [img4, img5, img6];
 function HomepageSlide2() {
+    const global_color = "$primay";
   const [currentImage, setCurrentImage] = useState(0);
   const [currentImage2, setCurrentImage2] = useState(0);
 
@@ -46,7 +48,7 @@ function HomepageSlide2() {
 
   return (
     <>
-      <h3 className="text-center" style={{ color: "#163A66" }}>
+      <h3 className="text-center global" style={{ color: global_color }}>
         Special Events{" "}
       </h3>
       <div style={{ marginTop: "7rem","margin":"5rem" }} >
