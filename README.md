@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project Availble 
 // it may be some images and information is render because the api is expire.\
-   [Nexa Ecommerce-Hub] https://master.d2w4otnmcfzgll.amplifyapp.com/
+   [Nexa Ecommerce-Hub](https://master.d2w4otnmcfzgll.amplifyapp.com).\
 In the project directory, you can run:
 
 ### `npm start`
